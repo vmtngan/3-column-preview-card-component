@@ -1,0 +1,125 @@
+:root {
+  --column-1: hsl(31, 77%, 52%);
+  --column-2: hsl(184, 100%, 22%);
+  --column-3: hsl(179, 100%, 13%);
+  --text: hsla(0, 0%, 100%, 0.75);
+  --background-heading: hsl(0, 0%, 95%);
+}
+
+@font-face {
+  font-family: "Lexend Deca";
+  src: url(./fonts/Lexend-Deca/LexendDeca-VariableFont_wght.ttf)
+    format("truetype-variations");
+}
+
+@font-face {
+  font-family: "Big Shoulders Display";
+  src: url(./fonts/Big-Shoulders-Display/BigShouldersDisplay-VariableFont_wght.ttf)
+    format("truetype-variations");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text);
+  background-color: var(--background-heading);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.card {
+  max-width: 327px;
+  display: flex;
+  flex-direction: column;
+  margin: 88px auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    max-width: 920px;
+    flex-direction: row;
+    margin: 170px auto;
+  }
+}
+
+.card__column {
+  padding: 48px;
+}
+
+.card__column--sedans {
+  background-color: var(--column-1);
+  border-radius: 8px 8px 0 0;
+}
+
+.card__column--suvs {
+  background-color: var(--column-2);
+}
+
+.card__column--luxury {
+  background-color: var(--column-3);
+  border-radius: 0 0 8px 8px;
+}
+
+@media screen and (min-width: 1024px) {
+  .card__column--sedans {
+    border-radius: 8px 0 0 8px;
+  }
+
+  .card__column--luxury {
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+.card__heading {
+  color: var(--background-heading);
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  text-transform: uppercase;
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+
+.card__btn {
+  cursor: pointer;
+  background-color: var(--background-heading);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  padding: 11px 31px;
+  margin-top: 25px;
+}
+
+@media screen and (min-width: 1024px) {
+  .card__btn {
+    margin-top: 83px;
+  }
+}
+
+.card__btn--sedans {
+  color: var(--column-1);
+}
+
+.card__btn--suvs {
+  color: var(--column-2);
+}
+
+.card__btn--luxury {
+  color: var(--column-3);
+}
+
+.card__btn:hover {
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+}
